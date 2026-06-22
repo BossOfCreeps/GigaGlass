@@ -6,11 +6,14 @@ class AiProvider:
         self.model = model
         self.token = token
 
-    def upload_file(self, file: BytesIO):
-        pass
+    def upload_file(self, file: BytesIO, *, name: str, format_: str) -> str:
+        raise NotImplementedError()
 
-    def list_files(self):
-        pass
+    def list_files(self) -> list[dict[str, str]]:
+        raise NotImplementedError()
 
-    def download_file(self, file_id: str):
-        pass
+    def get_file(self, file_id: str) -> dict[str, str]:
+        raise NotImplementedError()
+
+    def models_list(self) -> list[str]:
+        raise NotImplementedError()
