@@ -4,3 +4,5 @@
 *.pyc
 .env
 *.jpg
+*.mp3
+*.exe
