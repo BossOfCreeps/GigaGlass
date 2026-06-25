@@ -12,5 +12,7 @@ if __name__ == "__main__":
 
     image = camera.capture()
     id_ = provider.upload_file(image)
+    print(f"Загрузил файл: {id_}")
 
-    provider.call("Опиши фотографию", [id_])
+    text = provider.call("Опиши фотографию", [id_])
+    print(text)
